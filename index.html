@@ -2,19 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <title>Salary Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <title> Salary Calculator</title>
 </head>
 <body>
   <header>
-    <h1>Salary Calculator</h1>
+    <h1> Mahad's Salary Calculator</h1>
   </header>
   <main>
-    <h2>Add Employee</h2>
-    <h2>Employees</h2>
+    <section>
+      <h2> Add Employees</h2>
+      <form>
+        <input id="firsName"
+         `data-testid="firstNameInput"`
+         placeholder="First Name"
+         type="text"
+         />
+
+         <input id="lastName"
+         `data-testid="lastNameInput"`
+         placeholder="Last Name"
+         type="text"/>
+
+        <input id="idNumber"
+         `data-testid="idInput"`
+         placeholder="ID number"
+         type="text"/>
+
+         <input id="jobTitle"
+         `data-testid="jobTitleInput"`
+         placeholder=" Job Title"
+         type="text"/>
+
+         <input id="annualSalary"
+         `data-testid="annualSalaryInput"`
+         placeholder="Salary Input"
+         type="text"/> 
+         <button data-testid="submitButton" onclick="addNewEmployee(event)">Submit</button>
+      </form>
+    </section>
+    <section>
+      <h3> Employee Calculator</h3>
+      <table> 
+        <tbody id="CalculatorTable"> 
+        <thead>
+          <tr>
+            <th>First Name </th>
+            <th>Last Name</th>
+            <th> ID</th>
+            <th> Title</th>
+            <th> Salary</th>
+          </tr>
+        </thead>
+      </tbody>
+      </table>
+    </section>
   </main>
   <footer>
-    <p>Total Monthly</p>
+    <p>Total Monthly: </p>
   </footer>
 </body>
 </html>
